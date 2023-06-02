@@ -25,14 +25,13 @@ def draw_table(table, table_number):
     print(f"Tisch {table_number}:")
     print("+----------------------+")
     for student in table:
-        name = f"{student}"
+        name = f"{student[0]}"
         print(f"| {name:<20} |")
     print("+----------------------+\n")
 
 def main():
-    #file_name = input("Bitte geben Sie den Dateinamen der Schülerliste an (CSV-Format): ")
-    #student_data = read_student_data(file_name)
-    student_data = ["Bernd", "Claus", "Emily", "Larissa", "Karl", "Rudi", "Torben", "Lena", "Mara", "Wolle"]
+    file_name = input("Bitte geben Sie den Dateinamen der Schülerliste an (CSV-Format): ")
+    student_data = read_student_data(file_name)
 
     table_size = int(input("Bitte geben Sie die gewünschte Tischgröße (Anzahl der Sitzplätze pro Tisch) an: "))
 
